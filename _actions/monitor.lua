@@ -1,4 +1,4 @@
-gfx.init("Zuljeah - integrated", 770, 200)
+gfx.init("Zuljeah - integrated", 770, 200, 1)
 fontSize = 30
 gfx.setfont(1, "Consolas", fontSize)
 
@@ -44,7 +44,6 @@ local function render()
     if (activeRegion == 0) then
       reaper.OnStopButton()
       setSelectedIndex(setlist, lastActiveRegion + 1)
-      reaper.ShowConsoleMsg("Stopped.\n")
     end
     lastActiveRegion = activeRegion
   end

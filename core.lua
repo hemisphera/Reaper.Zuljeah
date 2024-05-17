@@ -87,5 +87,9 @@ end
 
 local function modifySelectedIndex(setlist, delta)
   selectedIndex, totalItems = getSelectedIndex(setlist)
-  setSelectedIndex(selectedIndex + delta)
+  if (selectedIndex == nil) then 
+    setSelectedIndex(setlist, 1)
+  else
+    setSelectedIndex(setlist, selectedIndex + delta)
+  end
 end
